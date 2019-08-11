@@ -8,7 +8,7 @@ const getState = ({ getStore, setStore }) => {
 			addContact: object => {
 				// let store = getStore();
 				// setStore({ contacts: store.contacts.concat(object) });
-				fetch("https://assets.breatheco.de/apis/fake/contact/agenda/my_agenda_slug", {
+				fetch("https://assets.breatheco.de/apis/fake/contact", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json"

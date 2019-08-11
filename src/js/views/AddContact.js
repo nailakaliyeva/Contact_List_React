@@ -63,6 +63,7 @@ export default class AddContact extends React.Component {
 										onClick={() => {
 											alert(this.state.fullName);
 											let person = {
+												agenda_slug: "my_agenda_slug",
 												fullName: this.state.fullName,
 												email: this.state.email,
 												phone: this.state.phone,
