@@ -6,13 +6,19 @@ const getState = ({ getStore, setStore }) => {
 		},
 		actions: {
 			addContact: object => {
-				let store = getStore();
-				setStore({ contacts: store.contacts.concat(object) });
+				// let store = getStore();
+				// setStore({ contacts: store.contacts.concat(object) });
+				fetch("https://assets.breatheco.de/apis/fake/contact/agenda/my_agenda_slug", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify(object)
+				});
 			}
-			//(Arrow) Functions that update the Store
-			// Remember to use the scope: scope.state.store & scope.setState()
 		}
+		//(Arrow) Functions that update the Store
+		// Remember to use the scope: scope.state.store & scope.setState()
 	};
 };
-
 export default getState;
