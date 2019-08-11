@@ -31,18 +31,31 @@ export default class AddContact extends React.Component {
 										/>
 									</div>
 									<div className="form-group">
-										<label onChange={e => this.setState({ email: e.target.value })}>Email</label>
-										<input type="email" className="form-control" placeholder="Enter email" />
+										<label>Email</label>
+										<input
+											onChange={e => this.setState({ email: e.target.value })}
+											type="email"
+											className="form-control"
+											placeholder="Enter email"
+										/>
 									</div>
 									<div className="form-group">
-										<label onChange={e => this.setState({ phone: e.target.value })}>Phone</label>
-										<input type="phone" className="form-control" placeholder="Enter phone" />
+										<label>Phone</label>
+										<input
+											onChange={e => this.setState({ phone: e.target.value })}
+											type="phone"
+											className="form-control"
+											placeholder="Enter phone"
+										/>
 									</div>
 									<div className="form-group">
-										<label onChange={e => this.setState({ address: e.target.value })}>
-											Address
-										</label>
-										<input type="text" className="form-control" placeholder="Enter address" />
+										<label>Address</label>
+										<input
+											onChange={e => this.setState({ address: e.target.value })}
+											type="text"
+											className="form-control"
+											placeholder="Enter address"
+										/>
 									</div>
 									<button
 										type="button"
