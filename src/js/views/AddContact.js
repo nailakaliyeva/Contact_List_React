@@ -6,10 +6,10 @@ export default class AddContact extends React.Component {
 		super();
 
 		this.state = {
-			fullName: ""
-			// 		// email: "",
-			// 		// phone: "",
-			// 		// address: ""
+			fullName: "",
+			email: "",
+			phone: "",
+			address: ""
 		};
 	}
 	render() {
@@ -31,25 +31,15 @@ export default class AddContact extends React.Component {
 										/>
 									</div>
 									<div className="form-group">
-										<label
-										//onChange={e => this.setState({ email: e.target.value })}
-										>
-											Email
-										</label>
+										<label onChange={e => this.setState({ email: e.target.value })}>Email</label>
 										<input type="email" className="form-control" placeholder="Enter email" />
 									</div>
 									<div className="form-group">
-										<label
-										//onChange={e => this.setState({ phone: e.target.value })}
-										>
-											Phone
-										</label>
+										<label onChange={e => this.setState({ phone: e.target.value })}>Phone</label>
 										<input type="phone" className="form-control" placeholder="Enter phone" />
 									</div>
 									<div className="form-group">
-										<label
-										// onChange={e => this.setState({ address: e.target.value })}
-										>
+										<label onChange={e => this.setState({ address: e.target.value })}>
 											Address
 										</label>
 										<input type="text" className="form-control" placeholder="Enter address" />
@@ -60,12 +50,12 @@ export default class AddContact extends React.Component {
 										onClick={() => {
 											alert(this.state.fullName);
 											let person = {
-												fullName: this.state.fullName
-												//email: this.state.email,
-												//phone: this.state.phone,
-												//address: this.state.address
+												fullName: this.state.fullName,
+												email: this.state.email,
+												phone: this.state.phone,
+												address: this.state.address
 											};
-											//actions.addContact(person);
+											actions.addContact(person);
 										}}>
 										save
 									</button>
