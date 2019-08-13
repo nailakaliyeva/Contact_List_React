@@ -39,7 +39,6 @@ export default class Contacts extends React.Component {
 														key={index}
 														onDelete={() => {
 															this.setState({ showModal: true, id: item.id });
-															console.log("whyyyy");
 														}}
 													/>
 												);

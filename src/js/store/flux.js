@@ -33,6 +33,8 @@ const getState = ({ getStore, setStore }) => {
 						console.log("the data came back from the server after successfull deletion");
 						setStore({ contacts: data.reverse() });
 					})
+
+					.then(window.location.reload())
 					.catch(err => console.error(err));
 			}
 		}
