@@ -9,7 +9,7 @@ const getState = ({ getStore, setStore }) => {
 				// let store = getStore();
 				// setStore({ contacts: store.contacts.concat(object) });
 				fetch("https://assets.breatheco.de/apis/fake/contact", {
-					method: "POST",
+					method: "post",
 					headers: {
 						"Content-Type": "application/json"
 					},

@@ -31,7 +31,7 @@ export default class Contacts extends React.Component {
 											store.contacts.map((item, index) => {
 												return (
 													<ContactCard
-														fullName={item.fullName}
+														full_name={item.fullName}
 														phone={item.phone}
 														address={item.address}
 														email={item.email}
