@@ -43,9 +43,16 @@ class Modal extends React.Component {
 									</div>
 									<div className="modal-footer">
 										<button type="button" className="btn btn-primary">
-											Oh no!
+											Cancel
 										</button>
-										<button type="button" className="btn btn-secondary" data-dismiss="modal">
+										<button
+											type="button"
+											className="btn btn-secondary"
+											data-dismiss="modal"
+											onClick={() => {
+												console.log("the delete button was clicked with the id", this.props.id);
+												actions.deleteContact(this.props.id);
+											}}>
 											Do it!
 										</button>
 									</div>
@@ -65,7 +72,8 @@ class Modal extends React.Component {
 Modal.propTypes = {
 	history: PropTypes.object,
 	onClose: PropTypes.func,
-	show: PropTypes.bool
+	show: PropTypes.bool,
+	id: PropTypes.string
 };
 
 /**

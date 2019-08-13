@@ -9,6 +9,7 @@ export default class Contacts extends React.Component {
 	constructor() {
 		super();
 		this.state = {
+			id: "",
 			showModal: false
 		};
 	}
@@ -36,18 +37,21 @@ export default class Contacts extends React.Component {
 														address={item.address}
 														email={item.email}
 														key={index}
-														onDelete={() =>
-															this.setState({
-																showModal: true
-															})
-														}
+														onDelete={() => {
+															this.setState({ showModal: true, id: item.id });
+															console.log("whyyyy");
+														}}
 													/>
 												);
 											})}
 									</ul>
 								</div>
 							</div>
-							<Modal show={this.state.showModal} onClose={() => this.setState({ showModal: false })} />
+							<Modal
+								id={this.state.id}
+								show={this.state.showModal}
+								onClose={() => this.setState({ showModal: false })}
+							/>
 						</div>
 					);
 				}}

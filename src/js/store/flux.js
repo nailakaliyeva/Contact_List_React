@@ -14,11 +14,26 @@ const getState = ({ getStore, setStore }) => {
 						"Content-Type": "application/json"
 					},
 					body: JSON.stringify(object)
-				}).then(() => {
-					fetch("https://assets.breatheco.de/apis/fake/contact/agenda/my_agenda_slug")
-						.then(response => response.json())
-						.then(data => setStore({ contacts: data.reverse() }));
-				});
+				})
+					.then(() => {
+						fetch("https://assets.breatheco.de/apis/fake/contact/agenda/my_agenda_slug")
+							.then(response => response.json())
+							.then(data => setStore({ contacts: data.reverse() }))
+							.catch(err => console.error(err));
+					})
+					.catch(err => console.error(err));
+			},
+			deleteContact: id => {
+				console.log("delete was successfully called for id", id);
+				fetch("https://assets.breatheco.de/apis/fake/contact/" + id, {
+					method: "DELETE"
+				})
+					.then(response => response.json())
+					.then(data => {
+						console.log("the data came back from the server after successfull deletion");
+						setStore({ contacts: data.reverse() });
+					})
+					.catch(err => console.error(err));
 			}
 		}
 		//(Arrow) Functions that update the Store
