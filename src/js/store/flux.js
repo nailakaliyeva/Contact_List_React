@@ -14,6 +14,10 @@ const getState = ({ getStore, setStore }) => {
 						"Content-Type": "application/json"
 					},
 					body: JSON.stringify(object)
+				}).then(() => {
+					fetch("https://assets.breatheco.de/apis/fake/contact/agenda/my_agenda_slug")
+						.then(response => response.json())
+						.then(data => setStore({ contacts: data.reverse() }));
 				});
 			}
 		}
