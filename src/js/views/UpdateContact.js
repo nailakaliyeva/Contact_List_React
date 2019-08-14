@@ -3,22 +3,24 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 export default class UpdateContact extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
+
+		this.obj = JSON.parse(this.props.match.params.obj);
 
 		this.state = {
-			fullName: "",
+			fullName: this.obj.full_name,
 			email: "",
 			phone: "",
 			address: ""
 		};
 	}
+
 	render() {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
 					let obj = JSON.parse(this.props.match.params.obj);
-					console.log(obj.id, obj.full_name);
 					return (
 						<div className="container">
 							<div>
@@ -27,7 +29,7 @@ export default class UpdateContact extends React.Component {
 									<div className="form-group">
 										<label>Full Name</label>
 										<input
-											defaultValue={obj.full_name}
+											defaultValue={this.state.fullName}
 											onChange={e => this.setState({ fullName: e.target.value })}
 											type="text"
 											className="form-control"
@@ -68,15 +70,24 @@ export default class UpdateContact extends React.Component {
 										type="button"
 										className="btn btn-primary form-control"
 										onClick={() => {
-											alert(this.state.fullName);
 											let person = {
+												id: obj.id,
 												full_name: this.state.fullName,
 												email: this.state.email,
 												agenda_slug: "my_agenda_slug",
 												address: this.state.address,
 												phone: this.state.phone
 											};
-											actions.addContact(person);
+											let o = {
+												id: "256",
+												agenda_slug: "my_agenda_slug",
+												full_name: "jesus",
+												email: "name@gmail.com",
+												phone: "jesus",
+												address: "jerusalem"
+											};
+
+											actions.updateContact(o);
 										}}>
 										save
 									</button>

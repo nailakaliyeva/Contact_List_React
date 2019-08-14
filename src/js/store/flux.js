@@ -36,6 +36,22 @@ const getState = ({ getStore, setStore }) => {
 
 					.then(window.location.reload())
 					.catch(err => console.error(err));
+			},
+			updateContact: obj => {
+				fetch("https://assets.breatheco.de/apis/fake/contact/" + obj.id, {
+					method: "PUT",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify(obj)
+					// .then(() => {
+					// 	fetch("https://assets.breatheco.de/apis/fake/contact/agenda/my_agenda_slug")
+					// 		.then(response => response.json())
+					// 		.then(data => {
+					// 			setStore({ contacts: data.reverse() });
+					// 		});
+					//})
+				});
 			}
 		}
 		//(Arrow) Functions that update the Store
