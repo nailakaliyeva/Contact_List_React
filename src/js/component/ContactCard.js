@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
-
+import { Link } from "react-router-dom";
 class ContactCard extends React.Component {
 	constructor() {
 		super();
@@ -23,14 +23,16 @@ class ContactCard extends React.Component {
 					</div>
 					<div className="col-12 col-sm-6 col-md-9 text-center text-sm-left">
 						<div className=" float-right">
-							<button className="btn">
-								<i className="fas fa-pencil-alt mr-3" />
-							</button>
+							<Link to={"/edit/" + JSON.stringify(this.props.obj)}>
+								<button className="btn">
+									<i className="fas fa-pencil-alt mr-3" />
+								</button>
+							</Link>
 							<button className="btn" onClick={() => this.props.onDelete()}>
 								<i className="fas fa-trash-alt" />
 							</button>
 						</div>
-						<label className="name lead">{this.props.fullName}</label>
+						<label className="name lead">{this.props.full_name}</label>
 						<br />
 						<i className="fas fa-map-marker-alt text-muted mr-3" />
 						<span className="text-muted">{this.props.address}</span>
@@ -62,10 +64,12 @@ class ContactCard extends React.Component {
  * your component's properties
  **/
 ContactCard.propTypes = {
-	fullName: PropTypes.string,
+	full_name: PropTypes.string,
 	address: PropTypes.string,
 	phone: PropTypes.string,
-	email: PropTypes.string
+	email: PropTypes.string,
+	obj: PropTypes.object,
+	id: PropTypes.number
 };
 
 ContactCard.propTypes = {
