@@ -10,9 +10,10 @@ export default class UpdateContact extends React.Component {
 
 		this.state = {
 			fullName: this.obj.full_name,
-			email: "",
-			phone: "",
-			address: ""
+			email: this.obj.email,
+			phone: this.obj.phone,
+			address: this.obj.address,
+			id: this.obj.id
 		};
 	}
 
@@ -20,7 +21,7 @@ export default class UpdateContact extends React.Component {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
-					let obj = JSON.parse(this.props.match.params.obj);
+					//let obj = JSON.parse(this.props.match.params.obj);
 					return (
 						<div className="container">
 							<div>
@@ -39,7 +40,7 @@ export default class UpdateContact extends React.Component {
 									<div className="form-group">
 										<label>Email</label>
 										<input
-											defaultValue={obj.email}
+											defaultValue={this.state.email}
 											onChange={e => this.setState({ email: e.target.value })}
 											type="email"
 											className="form-control"
@@ -49,7 +50,7 @@ export default class UpdateContact extends React.Component {
 									<div className="form-group">
 										<label>Phone</label>
 										<input
-											defaultValue={obj.phone}
+											defaultValue={this.state.phone}
 											onChange={e => this.setState({ phone: e.target.value })}
 											type="phone"
 											className="form-control"
@@ -59,7 +60,7 @@ export default class UpdateContact extends React.Component {
 									<div className="form-group">
 										<label>Address</label>
 										<input
-											defaultValue={obj.address}
+											defaultValue={this.state.address}
 											onChange={e => this.setState({ address: e.target.value })}
 											type="text"
 											className="form-control"
@@ -71,23 +72,15 @@ export default class UpdateContact extends React.Component {
 										className="btn btn-primary form-control"
 										onClick={() => {
 											let person = {
-												id: obj.id,
+												id: this.obj.id,
 												full_name: this.state.fullName,
 												email: this.state.email,
 												agenda_slug: "my_agenda_slug",
 												address: this.state.address,
 												phone: this.state.phone
 											};
-											let o = {
-												id: "256",
-												agenda_slug: "my_agenda_slug",
-												full_name: "jesus",
-												email: "name@gmail.com",
-												phone: "jesus",
-												address: "jerusalem"
-											};
 
-											actions.updateContact(o);
+											actions.updateContact(person);
 										}}>
 										save
 									</button>
