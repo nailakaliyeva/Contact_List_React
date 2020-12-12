@@ -15,7 +15,7 @@ class ContactCard extends React.Component {
 			<li className="list-group-item">
 				<div className="row w-100">
 					<div className="col-12 col-sm-6 col-md-9 text-center text-sm-left">
-						<div className=" float-right">
+						<div className="float-right">
 							<Link to={"/edit/" + JSON.stringify(this.props.obj)}>
 								<button className="btn">
 									<i className="fas fa-pencil-alt mr-3" />

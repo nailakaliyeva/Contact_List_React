@@ -61,7 +61,7 @@ export default class AddContact extends React.Component {
 										type="button"
 										className="btn btn-primary form-control"
 										onClick={() => {
-											alert(this.state.fullName);
+											alert("The contact has been saved");
 											let person = {
 												full_name: this.state.fullName,
 												email: this.state.email,
