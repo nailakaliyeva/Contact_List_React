@@ -17,7 +17,7 @@ class ContactCard extends React.Component {
 					<div className="col-12 col-sm-6 col-md-3 px-0">
 						<img
 							src="http://demos.themes.guide/bodeo/assets/images/users/m101.jpg"
-							alt="Mike Anamendolla"
+							alt={this.props.full_name}
 							className="rounded-circle mx-auto d-block img-fluid"
 						/>
 					</div>
