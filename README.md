@@ -1,39 +1,23 @@
-# Contact Managment Application
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
-
-### Read the instructions from https://projects.breatheco.de/d/contact-list#readme
-
-### Requirements:
+### Requirements: 
 - Make sure you are using node version 8
+```
+$ node -v
+
+### If that is not the version you're using, simply:
+```
+$ nvm install 8
 
 ### Install the packages:
 ```
 $ npm install
+
+### Run 
 ```
-#### if you see on the left the 'node_modules' folder, you don't need to run 'npm install'
+$ npm rebuild node -sass
 
-## Start coding!
-
-Start the webpack server with live reload:
+### Start the webpack server with live reload:
 - `$ npm run start` for windows, mac, linux or Gitpod.
 - `$ npm run c9` for Cloud 9 Users.
-
-# The project is divided in:
-## Two different views:
-
-* Contact: Contains the list of contacts.
-* AddContact: It's just a form that you can use to create or update contatcs.
-
-## There is one additional component:
-
-ContactCard: Ideal component to display just one contact.
-
-# Expected functionalities
-
-* You have to add the code needed to make your application create, edit, and delete contacts from the list.
-* (Optional but is a plus) Ask the user for confirmation before deleting, use the Modal component for that.
-
 
 ### Styles
 You can update the `styles/index.scss` or create new `.scss` files inside `styles/` and import them into your current scss or js files depending on your needs.
@@ -61,4 +45,25 @@ $ npm run deploy
 Note: You will need to [configure github pages for the branch gh-pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
 
 *********P.S***********
-You might need to delete a contact twice in order for it to actually be gone 
+You might need to delete a contact twice in order for it to actually be gone if you're only running 
+the front end of the project
+
+If you're running both front and AND back end, keep in mind,  that entering the same information twice 
+will give you a duplicate entry error on the back end
+
+Before running the front end of the project, make sure that you have the same URLs to addContact, 
+deleteContact and updateContact in flux.js file
+
+# Contact Managment Application
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
+
+### If you need more information, please read the instructions on https://projects.breatheco.de/d/contact-list#readme
+
+# The project is divided in two different views:
+
+* Contact: ---------------->Contains the list of contacts.
+* AddContact: -------------> It's just a form that you can use to create or update contatcs.
+
+## There is one additional component:
+
+ContactCard: Ideal component to display just one contact.
