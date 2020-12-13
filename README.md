@@ -63,11 +63,3 @@ deleteContact and updateContact in *flux.js* file
 
 ### If you need more information, please read the instructions on https://projects.breatheco.de/d/contact-list#readme
 
-# The project is divided in two different views:
-
-* Contact: Contains the list of contacts.
-* AddContact: It's just a form that you can use to create or update contatcs.
-
-## There is one additional component:
-
-ContactCard: Ideal component to display just one contact.
