@@ -1,7 +1,12 @@
-Here's a little guide on how to run a full stack application
-
+## IF YOU WANT TO RUN A FULL STACK APPLICATION:
 
 ![contact_list_full_stack_app](https://user-images.githubusercontent.com/42359973/102006672-cd5a5900-3cf0-11eb-92e9-7c1eb8d04272.gif)
+
+
+## IF YOU ONLY WANT THE FRONT END:
+
+![contact_list_front_end](https://user-images.githubusercontent.com/42359973/102007814-1bc02580-3cfa-11eb-8db4-4315ed912004.gif)
+
 
 
 ### Requirements: 
