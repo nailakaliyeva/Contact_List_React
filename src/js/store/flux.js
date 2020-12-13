@@ -8,7 +8,7 @@ const getState = ({ getStore, setStore }) => {
 			addContact: object => {
 				// let store = getStore();
 				// setStore({ contacts: store.contacts.concat(object) });
-				fetch("https://3000-ee73c9f7-8cba-4a60-85b2-2e9dc6963448.ws-us03.gitpod.io/contact", {
+				fetch("https://assets.breatheco.de/apis/fake/contact/", {
 					method: "post",
 					headers: {
 						"Content-Type": "application/json"
@@ -16,7 +16,7 @@ const getState = ({ getStore, setStore }) => {
 					body: JSON.stringify(object)
 				})
 					.then(() => {
-						fetch("https://3000-ee73c9f7-8cba-4a60-85b2-2e9dc6963448.ws-us03.gitpod.io/contact")
+						fetch("https://assets.breatheco.de/apis/fake/contact/agenda/my_agenda_slug")
 							.then(response => response.json())
 							.then(data => setStore({ contacts: data.reverse() }))
 							.catch(err => console.error(err));
@@ -25,7 +25,7 @@ const getState = ({ getStore, setStore }) => {
 			},
 			deleteContact: id => {
 				console.log("delete was successfully called for id", id);
-				fetch("https://3000-ee73c9f7-8cba-4a60-85b2-2e9dc6963448.ws-us03.gitpod.io/update/" + id, {
+				fetch("https://assets.breatheco.de/apis/fake/contact/" + id, {
 					method: "DELETE"
 				})
 					.then(response => response.json())
@@ -38,7 +38,7 @@ const getState = ({ getStore, setStore }) => {
 					.catch(err => console.error(err));
 			},
 			updateContact: obj => {
-				fetch("https://3000-ee73c9f7-8cba-4a60-85b2-2e9dc6963448.ws-us03.gitpod.io/update/" + obj.id, {
+				fetch("https://assets.breatheco.de/apis/fake/contact/" + obj.id, {
 					method: "PUT",
 					headers: {
 						"Content-Type": "application/json"
