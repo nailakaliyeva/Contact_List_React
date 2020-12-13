@@ -58,8 +58,5 @@ Before running the front end of the project,
 ⚠️ make sure that you have the correct URL and endpoints to addContact, 
 deleteContact and updateContact in *flux.js* file
 
-# Contact Managment Application
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
-
 ### If you need more information, please read the instructions on https://projects.breatheco.de/d/contact-list#readme
 
