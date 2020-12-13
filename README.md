@@ -13,7 +13,7 @@ $ npm install
 ```
 ### Run 
 ```
-$ npm rebuild node -sass
+$ npm rebuild node-sass
 ```
 ### Start the webpack server with live reload:
 - `$ npm run start` for windows, mac, linux or Gitpod.
