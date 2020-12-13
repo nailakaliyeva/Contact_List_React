@@ -58,5 +58,5 @@ Before running the front end of the project,
 ⚠️ make sure that you have the correct URL and endpoints to addContact, 
 deleteContact and updateContact in *flux.js* file
 
-### If you need more information, please read the instructions on [here](https://projects.breatheco.de/d/contact-list#readme)
+### If you need more information, please see the instructions [here](https://projects.breatheco.de/d/contact-list#readme)
 
