@@ -1,20 +1,20 @@
 ### Requirements: 
-- Make sure you are using node version 8
+⚠️ Make sure you are using node version 8. Check your node version by running:
 ```
 $ node -v
-
-### If that is not the version you're using, simply:
+```
+If version 8 is not the version you're using, simply:
 ```
 $ nvm install 8
-
+```
 ### Install the packages:
 ```
 $ npm install
-
+```
 ### Run 
 ```
 $ npm rebuild node -sass
-
+```
 ### Start the webpack server with live reload:
 - `$ npm run start` for windows, mac, linux or Gitpod.
 - `$ npm run c9` for Cloud 9 Users.
@@ -35,7 +35,7 @@ React Context [docs](https://reactjs.org/docs/context.html)
 
 The `Context.Provider` is already set, you can use the `Context.Consumer` to get the `store` and `actions` from the Context. Check `/views/demo.jsx` to see a demo.
 
-## Publish your website!
+### Publish your website!
 
 This boilerplate is 100% compatible with the free github pages hosting.
 To publish your website you need to push your code to your github repository and run the following command after:
@@ -44,15 +44,19 @@ $ npm run deploy
 ```
 Note: You will need to [configure github pages for the branch gh-pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
 
-*********P.S***********
-You might need to delete a contact twice in order for it to actually be gone if you're only running 
+# P.S
+⚠️ You might need to delete a contact twice in order for it to actually be gone if you're only running 
 the front end of the project
 
-If you're running both front and AND back end, keep in mind,  that entering the same information twice 
+If you're running both front and AND back end, 
+
+⚠️ keep in mind,  that entering the same information twice 
 will give you a duplicate entry error on the back end
 
-Before running the front end of the project, make sure that you have the same URLs to addContact, 
-deleteContact and updateContact in flux.js file
+Before running the front end of the project, 
+
+⚠️ make sure that you have the correct URL and endpoints to addContact, 
+deleteContact and updateContact in *flux.js* file
 
 # Contact Managment Application
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
@@ -61,8 +65,8 @@ deleteContact and updateContact in flux.js file
 
 # The project is divided in two different views:
 
-* Contact: ---------------->Contains the list of contacts.
-* AddContact: -------------> It's just a form that you can use to create or update contatcs.
+* Contact: Contains the list of contacts.
+* AddContact: It's just a form that you can use to create or update contatcs.
 
 ## There is one additional component:
 
